@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  background: white;
+}
+img{
+  max-width: 100%;
+  object-fit: contain;
+}
+.container {
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 1160px;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.main-wrapper{
+  flex-grow: 1;
+}
+.page-header{
+  padding: 45px 60px 0;
+  min-height: 300px;
+
+  background-color: #FFE17F;
+  background-position: center 25px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+.device-logo-link{
+  width:145px;
+  height:36px;
+
+  position: absolute;
+  top:-20px;
+  left:60px;
+}
+.black-logo:hover{
+  opacity: 0.6;
+}
+.black-logo:active{
+  opacity: 0.3;
+}
+.user-menu{
+  margin:0;
+  padding:0 0 30px 0;
+
+  font-family: 'Rubik',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+
+  list-style-type: none;
+
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-form label{
+  display: flex;
+}
+.search-input, .search-button{
+  font-family: 'Rubik',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+.search-input{
+  margin:0;
+  padding: 0;
+  width:359px;
+
+  background:#FFE17F;
+
+  border: 2px solid #000000;
+  border-right: none;
+  border-radius: 50px 0 0 50px;
+}
+.search-button{
+  margin:0;
+  padding: 0;
+  width:160px;
+  min-height: 40px;
+
+
+  background:#FFE17F;
+
+  border: 2px solid #000000;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}
+.user-menu-item a{
+  color: #000000;
+  text-decoration:none;
+}
+.user-menu-search{
+  margin-right: 53px;
+  width: 517px;
+  min-height: 40px;
+}
+.user-menu-item{
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+.user-menu-login{
+  margin-right: 26px;
+  min-width:231px;
+}
+.user-menu-compare{
+  margin-right: 36px;
+  min-width: 105px;
+}
+.user-menu-basket{
+  min-width: 99px;
+}
+.login-link{
+  position: relative;
+}
+.login-link::after{
+  width:13px;
+  height:12px;
+
+  background: url("../images/header/login-icon.svg") no-repeat;
+
+  content: "";
+  position: absolute;
+  top:5px;
+  left:-25px;
+}
+.menu-list, .menu{
+  margin: 0;
+  padding: 0;
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu-list{
+  width:471px;
+
+  list-style-type: none;
+}
+.menu-catalog{
+  min-width: 293px;
+  margin-right: 276px;
+}
+.menu a{
+  font-family: 'Raleway',sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
