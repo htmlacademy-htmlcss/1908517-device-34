@@ -48,7 +48,7 @@ img{
 .container {
   margin: 0 auto;
   padding-top: 40px;
-  width: 1160px;
+  width: 100%;
   min-height: 100%;
 
   display: flex;
@@ -58,6 +58,8 @@ img{
   flex-grow: 1;
 }
 .page-header{
+  width: 1160px;
+  margin: 0 auto;
   padding: 45px 60px 0;
   height: 300px;
 
@@ -66,6 +68,7 @@ img{
   display: flex;
   flex-direction: column;
 
+  box-sizing:border-box;
   position: relative;
 }
 .device-logo-link{
@@ -218,7 +221,8 @@ img{
   color: #000000;
 }
 .about-device{
-  margin-bottom: 70px;
+  width: 1160px;
+  margin: 0 auto 70px;
 
   display: flex;
   align-items: center;
@@ -262,6 +266,8 @@ img{
   justify-content: space-between;
 }
 .detailed-link{
+  margin-right: 264px;
+
   font-family: 'Raleway',sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -272,6 +278,30 @@ img{
   text-transform: uppercase;
   color: #000000;
 }
+
+.slider-pagination-list{
+  width:100px;
+
+  display: flex;
+  align-items: center;
+  gap:20px;
+  list-style-type: none;
+}
+
+.slider-pagination-item{
+  width: 12px;
+  height: 12px;
+
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.slider-pagination-item.active{
+  background: #000000;
+}
+
 .flight-wrapper{
   display: flex;
   align-items: center;
@@ -294,6 +324,11 @@ img{
   font-size: 16px;
   line-height: 30px;
   color: #444444;
+}
+
+.category{
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .category-list{
@@ -332,8 +367,12 @@ img{
 }
 
 .about-delivery{
+  width: 1160px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .about-delivery-buttons{
@@ -347,9 +386,29 @@ img{
   justify-content: space-between;
   flex-direction: column;
   gap:45px;
+
+  position: relative;
+}
+
+.about-delivery-button-wrapper{
+  position: relative;
+}
+
+.about-delivery-underline{
+  width: 160px;
+  height:8px;
+
+  background: #FFE17F;
+  content: "";
+  position: absolute;
+  top:5px;
+  z-index:1;
 }
 
 .about-delivery-button{
+  width:150px;
+  padding: 0;
+
   font-family: 'Raleway',sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -359,6 +418,31 @@ img{
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index:2;
+}
+
+.about-delivery-button-wrapper.active:before{
+  width: 280px;
+  height: 40px;
+
+  background: #000000;
+  content: "";
+  position: absolute;
+}
+
+.about-delivery-button-wrapper.active:after{
+  width: 7px;
+  height: 319px;
+
+  background: #000000;
+  content: "";
+  position: absolute;
+  left: 280px;
+  top: -53px;
 }
 
 .about-delivery-description{
@@ -380,6 +464,19 @@ img{
   font-size: 18px;
   line-height: 30px;
   color: #444444;
+}
+
+.about-delivery-background{
+  width: 100%;
+  height: 289px;
+
+  background: #F0F0F0;
+  position: absolute;
+}
+
+.about-company{
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .about-company-header{
@@ -446,6 +543,16 @@ img{
   color: #444444;
 }
 
+.about-company-contacts-phone{
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #444444;
+}
+
 .transports-list{
   margin: 0 0 30px 0;
 }
@@ -486,6 +593,8 @@ img{
   color: #444444;
 }
 .subscribe{
+  width: 1160px;
+  margin: 0 auto;
   padding: 64px 0 56px;
 }
 .subscribe-wrapper{
@@ -493,7 +602,6 @@ img{
   align-items: center;
   justify-content: space-between;
 }
-
 .subscribe-title{
   width:348px;
 }
@@ -516,6 +624,20 @@ img{
 .subscribe-wrapper:first-child{
   margin-bottom: 144px;
 }
+
+.subscribe-form{
+  width: 810px;
+}
+
+.subscribe-form-input{
+  width: 557px;
+  height: 55px;
+
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  box-sizing: border-box;
+}
+
 .page-footer{
   width: 100%;
   min-height: 321px;
@@ -526,19 +648,24 @@ img{
 .page-footer-wrapper{
   width: 1160px;
   min-height: 321px;
+  margin: 0 auto;
+  padding: 62px 0 61px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 444px 1fr;
+  grid-template-areas: "device device device"
+  "content menu phone"
+  "underline icons academy";
+  align-items: center;
 }
 
-
-
-.footer-wrapper-logo{
-  width:239px;
-  margin: 62px 119px 0 0;
+.footer-logo{
+  grid-area: device;
 }
+.footer-logo-content{
+  width: 239px;
+  grid-area: content;
 
-.footer-wrapper-logo-content{
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -547,28 +674,74 @@ img{
   color: #FFFFFF;
 }
 
-.footer-wrapper-logo-underline{
+.footer-logo-underline{
   width:80px;
   height: 7px;
+
+  grid-area: underline;
 
   background: #FFC700;
 }
 
 .footer-menu-list{
   display: flex;
+  gap: 35px;
+
+  grid-area:menu;
+  justify-self: center;
 
   list-style-type: none;
 }
+
+.footer-menu-item{
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
 .footer-icons-list{
   display: flex;
+  gap: 15px;
+
+  grid-area: icons;
+  justify-self: center;
 
   list-style-type: none;
 }
 
-.footer-wrapper{
-  margin-bottom: 77px;
+.footer-icons-item{
+  width: 40px;
+  height: 40px;
 
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-phone{
+  margin-left: 183px;
+
+  grid-area: phone;
+
+  font-family: 'Rubik',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+.footer-html-link{
+  margin-left: 243px;
+
+  grid-area:academy;
 }
