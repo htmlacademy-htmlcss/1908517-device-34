@@ -23,7 +23,7 @@
       <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
         <div class="search-form-input-wrapper">
           <label class="visually-hidden" for="search-form-input">Поле поиска</label>
-          <input class="search-form-input" id="search-form-input" type="text" name="search" placeholder="Текст поиска" required>
+          <input class="search-form-input" id="search-form-input" type="search" name="search" placeholder="Текст поиска" required>
         </div>
         <button class="search-form-button" type="submit">Найти</button>
       </form>
@@ -247,7 +247,6 @@
     <div class="container services-wrapper">
       <h2 class="visually-hidden">Услуги компании</h2>
       <ul class="services-list">
-
         <li class="services-item services-item-current">
           <button class="button services-button services-button-current">Доставка</button>
         </li>
@@ -258,7 +257,7 @@
         </li>
         <!--Для отображения активной кнопки добавить класс services-item-current-->
         <li class="services-item">
-          <!--Для отображения активной кнопки добавить классы services-button-current services-button-current-kredit-->
+          <!--Для отображения активной кнопки добавить классы services-button-current services-button-current-credit-->
           <button class="button services-button">Кредит</button>
         </li>
       </ul>
@@ -431,7 +430,7 @@
           <div class="modal-field-group">
             <label class="modal-text" for="name">Ваше имя:</label>
             <!--Для отображения ошибки добавить класс error-->
-            <input class="modal-input modal-input-name" type="text" name="name" placeholder="Введите имя" id="name"
+            <input class="modal-input modal-input-name" type="email" name="name" placeholder="Введите имя" id="name"
                    required>
             <!--Для отображения сообщения добавить класс modal-message-shown-->
             <p class="modal-message">Добавьте имя</p>
@@ -451,16 +450,16 @@
                    required>
           </div>
           <div class="modal-field-group">
-                <span class="modal-text modal-tooltip-wrapper">
-                  <label class="modal-text" for="amount">Количество:</label>
-                  <span class="tooltip">
-                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                      <span class="visually-hidden">Открыть подсказку</span>
-                    </button>
-                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно.
+            <span class="modal-text modal-tooltip-wrapper">
+              <label class="modal-text" for="amount">Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <span class="visually-hidden">Открыть подсказку</span>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно.
                       Привезём сколько получится по требованиям к&nbsp;провозу багажа.</span>
-                  </span>
-                </span>
+              </span>
+            </span>
             <div class="modal-field-group amount-group">
               <input class="modal-input modal-input-amount" type="text" name="amount" placeholder="1" id="amount">
               <button class="modal-amount-button amount-button-minus" type="button">
