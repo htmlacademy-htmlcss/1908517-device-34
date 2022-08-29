@@ -1573,7 +1573,7 @@ img {
   padding-left: 32px;
   background-image: url("../images/tick.svg");
   background-repeat: no-repeat;
-  background-position: 0% 50%;
+  background-position: 0 50%;
 }
 
 /*Footer*/
